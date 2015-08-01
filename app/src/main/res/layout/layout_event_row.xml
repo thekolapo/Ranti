@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/white"
+    android:layout_marginTop="20dp">
+
+  <ImageView
+      android:id="@+id/event_image"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:contentDescription="event image"
+      android:src="@drawable/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biola's wedding anniversary"
+        android:layout_marginLeft="80dp"/>
+
+    <TextView
+        android:id="@+id/event_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30 May"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>
