@@ -1,6 +1,8 @@
 package com.kolapo.ranti;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
+
+import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView rvEvents = (RecyclerView) findViewById(R.id.rvEvents);
         rvEvents.setHasFixedSize(true);
+        rvEvents.setItemAnimator(new SlideInUpAnimator());
 
         //Set layout manager to position the items
         rvEvents.setLayoutManager(new LinearLayoutManager(this));
@@ -55,11 +60,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private ArrayList<Event> getEvents() {
+        Bitmap bm = BitmapFactory.decodeResource(getResources(),R.drawable.img_kp);
         ArrayList<Event> items = new ArrayList<Event>();
-        items.add(new Event("Biola's wedding anniversary", "30 March"));
-        items.add(new Event("Kolapo's birthday", "30 May"));
-        items.add(new Event("Christmas wishes to Tinu", "25 Dec"));
-        items.add(new Event("Easter message", "1 April"));
+        items.add(new Event("Biola's wedding anniversary", "March 30", bm));
+        items.add(new Event("Kolapo's birthday", "May 30", bm));
+        items.add(new Event("Christmas wishes to Tinu", "Dec 25", bm));
+        items.add(new Event("Happy Easter messageto tola", "April 1", bm));
+
+        items.add(new Event("Biola's wedding anniversary", "March 30", bm));
+        items.add(new Event("Kolapo's birthday", "May 30", bm));
+        items.add(new Event("Christmas wishes to Tinu", "Dec 25", bm));
+        items.add(new Event("Happy Easter messageto tola", "April 1", bm));
+        items.add(new Event("Biola's wedding anniversary", "March 30", bm));
+        items.add(new Event("Kolapo's birthday", "May 30", bm));
+        items.add(new Event("Christmas wishes to Tinu", "Dec 25", bm));
+        items.add(new Event("Happy Easter messageto tola", "April 1", bm));
+        items.add(new Event("Biola's wedding anniversary", "March 30", bm));
+        items.add(new Event("Kolapo's birthday", "May 30", bm));
+        items.add(new Event("Christmas wishes to Tinu", "Dec 25", bm));
+        items.add(new Event("Happy Easter messageto tola", "April 1", bm));
         return items;
     }
 }

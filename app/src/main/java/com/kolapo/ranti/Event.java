@@ -1,5 +1,6 @@
 package com.kolapo.ranti;
 
+import android.graphics.Bitmap;
 import android.media.Image;
 
 /**
@@ -8,9 +9,11 @@ import android.media.Image;
 public class Event {
     public String name;
     public String date;
+    public Bitmap bitmap;
 
-    public Event(String name, String date){
+    public Event(String name, String date, Bitmap bitmap){
         this.name = name;
         this.date = date;
+        this.bitmap = bitmap;
     }
 }

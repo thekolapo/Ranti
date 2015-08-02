@@ -4,12 +4,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@android:color/white"
-    android:layout_marginTop="20dp">
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="17dp">
 
   <ImageView
       android:id="@+id/event_image"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="60dp"
+      android:layout_height="50dp"
       android:layout_marginStart="20dp"
       android:contentDescription="event image"
       android:src="@drawable/ic_launcher"/>
@@ -18,16 +19,21 @@
         android:id="@+id/event_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Biola's wedding anniversary"
-        android:layout_marginLeft="80dp"/>
+        android:text="Kolapo's birthday"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_alignLeft="@id/event_image"
+        android:layout_marginLeft="70dp"/>
 
     <TextView
         android:id="@+id/event_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="30 May"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="20dp"/>
+        android:textSize="14.75sp"
+        android:layout_alignLeft="@id/event_image"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="31dp"/>
 
 
 </RelativeLayout>

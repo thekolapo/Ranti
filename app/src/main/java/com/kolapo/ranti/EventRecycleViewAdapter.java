@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -19,11 +20,13 @@ public class EventRecycleViewAdapter extends RecyclerView.Adapter<EventRecycleVi
 
         public TextView tvName;
         public TextView tvDate;
+        public ImageView ivEventImage;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.tvName = (TextView) itemView.findViewById(R.id.event_name);
             this.tvDate = (TextView) itemView.findViewById(R.id.event_date);
+            this.ivEventImage = (ImageView) itemView.findViewById(R.id.event_image);
         }
 
     }
@@ -52,6 +55,7 @@ public class EventRecycleViewAdapter extends RecyclerView.Adapter<EventRecycleVi
         // Set item views based on the data model
         holder.tvName.setText(event.name);
         holder.tvDate.setText(event.date);
+        holder.ivEventImage.setImageDrawable(new RoundImage(event.bitmap));
     }
 
     @Override
